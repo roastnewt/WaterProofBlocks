@@ -1,0 +1,19 @@
+#
+# The materials listed below will not be broken by flowing water / lava.
+# Please use the material names as found here: 
+# http://jd.bukkit.org/dev/doxygen/d6/d0e/enumorg_1_1bukkit_1_1Material.html
+#
+BlockWater: true
+BlockLava: true
+MaterialList:
+- REDSTONE_WIRE
+- REDSTONE_TORCH_ON
+- REDSTONE_TORCH_OFF
+- REDSTONE_COMPARATOR_ON
+- REDSTONE_COMPARATOR_OFF
+- DIODE_BLOCK_OFF
+- DIODE_BLOCK_ON
+- RAILS
+- POWERED_RAIL
+- DETECTOR_RAIL
+- ACTIVATOR_RAIL
