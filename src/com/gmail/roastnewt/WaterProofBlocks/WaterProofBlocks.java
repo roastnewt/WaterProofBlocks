@@ -56,26 +56,10 @@ public class WaterProofBlocks extends JavaPlugin implements Listener
 	public void onBlockChange(BlockFromToEvent e)
 	{
 
-		if (e.getBlock().getType() == Material.WATER && !_BlockWater)
-		{
-			System.out.println("Would have blocked water, but BlockWater == False");
-			return;
-		}
-		if (e.getBlock().getType() == Material.STATIONARY_WATER && !_BlockWater)
-		{
-			System.out.println("Would have blocked water, but BlockWater == False");
-			return;
-		}
-		if (e.getBlock().getType() == Material.LAVA && !_BlockLava)
-		{
-			System.out.println("Would have blocked lava, but BlockLava == False");
-			return;
-		}
-		if (e.getBlock().getType() == Material.STATIONARY_LAVA && !_BlockLava)
-		{
-			System.out.println("Would have blocked lava, but BlockLava == False");
-			return;
-		}
+		if (e.getBlock().getType() == Material.WATER && !_BlockWater) return;
+		if (e.getBlock().getType() == Material.STATIONARY_WATER && !_BlockWater) return;
+		if (e.getBlock().getType() == Material.LAVA && !_BlockLava) return;
+		if (e.getBlock().getType() == Material.STATIONARY_LAVA && !_BlockLava) return;
 		
 		Material blockMaterial = e.getToBlock().getType();
 		
@@ -84,7 +68,6 @@ public class WaterProofBlocks extends JavaPlugin implements Listener
 			if (blockMaterial == Material.matchMaterial(materialString))
 			{
 				e.setCancelled(true);
-				System.out.println("Cancelled Event!");
 			}
 		}
 		
